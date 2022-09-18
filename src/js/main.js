@@ -1,5 +1,3 @@
-// import "@babel/polyfill"; // IE対応する場合、コメント解除
-
 // ブラウザ（デバイス）分岐処理
 import UaParser from 'ua-parser-js';
 const uaParser = new UaParser();
@@ -24,9 +22,6 @@ const init = async () => {
       break;
     // case 'Safari':
     //   HtmlElement.classList.add('is-safari');
-    //   break;
-    // case 'IE':
-    //   require('./init/ie').default();
     //   break;
     default:
   }

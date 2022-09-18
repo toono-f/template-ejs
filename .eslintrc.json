@@ -1,11 +1,10 @@
-// 参考： https://zenn.dev/teppeis/articles/2021-02-eslint-prettier-vscode
 {
   "root": true,
   "env": {
     "browser": true,
-    "es7": true,
     "node": true,
-    "jquery": true
+    "jquery": true,
+    "es2020": true
   },
   "parserOptions": {
     "sourceType": "module",

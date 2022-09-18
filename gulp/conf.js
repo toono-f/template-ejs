@@ -137,15 +137,6 @@ module.exports.vendorScripts = {
   dest: `./${DIR.DEST}${DIR.PATH}/assets/js/`,
 };
 
-module.exports.pug = {
-  src: [`${DIR.SRC}/**/*.pug`, `!${DIR.SRC}/**/_**/*.pug`, `!${DIR.SRC}/**/_*.pug`],
-  dest: `${DIR.DEST}${DIR.PATH}`,
-  opts: {
-    pretty: true,
-  },
-  json: `${DIR.SRC}/data.json`,
-};
-
 module.exports.ejs = {
   src: [`${DIR.SRC}/**/*.ejs`, `!${DIR.SRC}/**/_**/*.ejs`, `!${DIR.SRC}/**/_*.ejs`],
   dest: `${DIR.DEST}${DIR.PATH}`,
