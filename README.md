@@ -33,7 +33,7 @@ https://github.com/sindresorhus/slash/releases
 https://crieit.net/posts/gulp-imagemin-become-pure-esm-package-20210817
 
 # コーディング方針
-- HTML: HTML5（PugまたはEJS）
+- HTML: HTML5（EJS）
 - CSS: CSS3（SCSS）
 - JavaScript: ECMAScript5互換、jQueryも利用可能
 - 改行コード: CR+LF
