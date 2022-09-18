@@ -1,0 +1,65 @@
+.u-ta {
+  &-l {
+    text-align: left;
+  }
+  &-c {
+    text-align: center;
+  }
+  &-r {
+    text-align: right;
+  }
+  &-j {
+    text-align: justify;
+  }
+}
+
+@include l-pc {
+  .u-ta {
+    &-l-pc {
+      text-align: left;
+    }
+    &-c-pc {
+      text-align: center;
+    }
+    &-r-pc {
+      text-align: right;
+    }
+    &-j-pc {
+      text-align: justify;
+    }
+  }
+}
+
+@include l-tablet {
+  .u-ta {
+    &-l-tb {
+      text-align: left;
+    }
+    &-c-tb {
+      text-align: center;
+    }
+    &-r-tb {
+      text-align: right;
+    }
+    &-j-tb {
+      text-align: justify;
+    }
+  }
+}
+
+@include l-mobile {
+  .u-ta {
+    &-l-sp {
+      text-align: left;
+    }
+    &-c-sp {
+      text-align: center;
+    }
+    &-r-sp {
+      text-align: right;
+    }
+    &-j-sp {
+      text-align: justify;
+    }
+  }
+}

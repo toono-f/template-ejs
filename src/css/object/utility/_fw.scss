@@ -1,0 +1,7 @@
+.u-fw {
+  @each $key, $value in $font-weights {
+    &-#{$key} {
+      font-weight: $value;
+    }
+  }
+}

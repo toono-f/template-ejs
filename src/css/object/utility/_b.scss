@@ -1,0 +1,48 @@
+.u-b {
+  &t {
+    &-solid {
+      border-style: solid;
+      border-top: rem(1);
+    }
+    &-dotted {
+      border-style: dotted;
+      border-top: rem(1);
+    }
+  }
+  &r {
+    &-solid {
+      border-style: solid;
+      border-right: rem(1);
+    }
+    &-dotted {
+      border-style: dotted;
+      border-right: rem(1);
+    }
+  }
+  &b {
+    &-solid {
+      border-style: solid;
+      border-bottom: rem(1);
+    }
+    &-dotted {
+      border-style: dotted;
+      border-bottom: rem(1);
+    }
+  }
+  &l {
+    &-solid {
+      border-style: solid;
+      border-left: rem(1);
+    }
+    &-dotted {
+      border-style: dotted;
+      border-left: rem(1);
+    }
+  }
+  &-all {
+    &-solid {
+      border: rem(1);
+      border-style: solid;
+    }
+  }
+}

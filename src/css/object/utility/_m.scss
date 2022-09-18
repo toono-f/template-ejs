@@ -1,0 +1,100 @@
+$count: $count;
+
+.u-m {
+  @for $i from 0 through $count {
+    &t-#{$i * 5} {
+      margin-top: rem(floor(($i * 5) * 1));
+    }
+    &b-#{$i * 5} {
+      margin-bottom: rem(floor(($i * 5) * 1));
+    }
+    &r-#{$i * 5} {
+      margin-right: rem(floor(($i * 5) * 1));
+    }
+    &l-#{$i * 5} {
+      margin-left: rem(floor(($i * 5) * 1));
+    }
+  }
+  @for $i from 0 through $count {
+    @include l-pc {
+      &t-pc-#{$i * 5} {
+        margin-top: rem(floor(($i * 5) * 1));
+      }
+      &b-pc-#{$i * 5} {
+        margin-bottom: rem(floor(($i * 5) * 1));
+      }
+      &r-pc-#{$i * 5} {
+        margin-right: rem(floor(($i * 5) * 1));
+      }
+      &l-pc-#{$i * 5} {
+        margin-left: rem(floor(($i * 5) * 1));
+      }
+    }
+  }
+  @for $i from 0 through $count {
+    @include l-tablet {
+      &t-tb-#{$i * 5} {
+        margin-top: rem(floor(($i * 5) * 1));
+      }
+      &b-tb-#{$i * 5} {
+        margin-bottom: rem(floor(($i * 5) * 1));
+      }
+      &r-tb-#{$i * 5} {
+        margin-right: rem(floor(($i * 5) * 1));
+      }
+      &l-tb-#{$i * 5} {
+        margin-left: rem(floor(($i * 5) * 1));
+      }
+    }
+  }
+  @for $i from 0 through $count {
+    @include l-mobile {
+      &t-sp-#{$i * 5} {
+        // margin-top: rem(floor(($i * 5) * 1));
+        margin-top: sp(floor(($i * 5) * 1)); // vwを利用する場合
+        //margin-top: mn(floor(($i * 5) * 1)); // 最大値のみ設定する場合
+        //margin-top: cp(floor(($i * 5) * 1), floor(($i * 5) * 2)); // 最小値も設定する場合
+      }
+      &b-sp-#{$i * 5} {
+        // margin-bottom: rem(floor(($i * 5) * 1));
+        margin-bottom: sp(floor(($i * 5) * 1)); // vwを利用する場合
+        //margin-bottom: mn(floor(($i * 5) * 1)); // 最大値のみ設定する場合
+        //margin-bottom: cp(floor(($i * 5) * 1), floor(($i * 5) * 2)); // 最小値も設定する場合
+      }
+      &r-sp-#{$i * 5} {
+        // margin-right: rem(floor(($i * 5) * 1));
+        margin-right: sp(floor(($i * 5) * 1)); // vwを利用する場合
+        //margin-right: mn(floor(($i * 5) * 1)); // 最大値のみ設定する場合
+        //margin-right: cp(floor(($i * 5) * 1), floor(($i * 5) * 2)); // 最小値も設定する場合
+      }
+      &l-sp-#{$i * 5} {
+        // margin-left: rem(floor(($i * 5) * 1));
+        margin-left: sp(floor(($i * 5) * 1)); // vwを利用する場合
+        //margin-left: mn(floor(($i * 5) * 1)); // 最大値のみ設定する場合
+        //margin-left: cp(floor(($i * 5) * 1), floor(($i * 5) * 2)); // 最小値も設定する場合
+      }
+    }
+  }
+  &-center {
+    margin-right: auto;
+    margin-left: auto;
+    &-pc {
+      @include l-pc {
+        margin-right: auto;
+        margin-left: auto;
+      }
+    }
+    &-tb {
+      @include l-tablet {
+        margin-right: auto;
+        margin-left: auto;
+      }
+    }
+    &-sp {
+      @include l-mobile {
+        margin-right: auto;
+        margin-left: auto;
+      }
+    }
+  }
+}

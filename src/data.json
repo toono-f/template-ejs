@@ -1,0 +1,30 @@
+{
+  "meta": {
+    "websiteName": "サイト名",
+    "websiteDomain": "",
+    "description": "",
+    "themeColor": "#ffffff"
+  },
+  "pages": {
+    "index": {
+      "id": "index",
+      "category": "index",
+      "root": "pages",
+      "title": "タイトルが入ります",
+      "description": "descriptionが入ります",
+      "directory": "index.html",
+      "path": "",
+      "ogpImg": "ogp.jpg"
+    },
+    "link": {
+      "id": "link",
+      "category": "link",
+      "root": "pages",
+      "title": "Link",
+      "description": "Linkです",
+      "directory": "link/",
+      "path": "../",
+      "ogpImg": "ogp.jpg"
+    }
+  }
+}

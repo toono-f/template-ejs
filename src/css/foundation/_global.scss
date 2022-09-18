@@ -1,0 +1,120 @@
+/*! purgecss start ignore */
+html {
+  height: 100%;
+  font-size: 62.5%;
+  &.is-chrome {
+    img {
+      image-rendering: -webkit-optimize-contrast; // Chromeでの画像ぼやけ防止
+    }
+  }
+}
+
+body {
+  width: 100%;
+  min-height: 100%;
+  // 以下設定必要
+  font-family: ff(ja);
+  font-weight: fw(normal);
+  line-height: lh(md);
+  color: c(default);
+  letter-spacing: ls(xs);
+  @include fs-all(14, 16);
+  // 改行設定
+  word-wrap: break-word;
+  // テキスト自動拡大アルゴリズムを有効化
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  // アンチエイリアスを調節（mac）
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  @include l-mobile {
+    // テキスト自動拡大アルゴリズムを無効化
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+  }
+  @include print {
+    zoom: 0.5;
+    -webkit-print-color-adjust: exact;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a[href^='tel:'] {
+  cursor: default;
+}
+
+b,
+strong {
+  font-weight: fw(bold);
+}
+
+em {
+  font-style: italic;
+}
+
+sup {
+  vertical-align: super;
+}
+
+sub {
+  vertical-align: sub;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+input,
+textarea,
+button,
+select {
+  font: inherit;
+  border-radius: 0;
+  outline: none;
+}
+
+button {
+  padding: 0;
+  margin: 0;
+  color: inherit;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  appearance: none;
+}
+
+option {
+  min-height: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+input::placeholder {
+  color: rgba(c(default), 0.5);
+}
+
+/*! purgecss end ignore */
+
+/* IE */
+// input:-ms-input-placeholder {
+//   color: rgba(c(default), 0.5);
+// }
+
+// *:focus {
+//   outline: none; // クリックしたときの青い枠線
+// }
+
+// a,button {
+//   -webkit-tap-highlight-color:rgba(0,0,0,0); // タップしたときの青い四角を消す
+// }

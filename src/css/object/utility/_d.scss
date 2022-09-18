@@ -1,0 +1,77 @@
+.u-d {
+  &-b {
+    display: block;
+  }
+  &-ib {
+    display: inline-block;
+  }
+  &-i {
+    display: inline;
+  }
+  &-t {
+    display: table;
+  }
+  &-tc {
+    display: table-cell;
+  }
+}
+
+@include l-pc {
+  .u-d-pc {
+    &-b {
+      display: block;
+    }
+    &-ib {
+      display: inline-block;
+    }
+    &-i {
+      display: inline;
+    }
+    &-t {
+      display: table;
+    }
+    &-tc {
+      display: table-cell;
+    }
+  }
+}
+
+@include l-tablet {
+  .u-d-tb {
+    &-b {
+      display: block;
+    }
+    &-ib {
+      display: inline-block;
+    }
+    &-i {
+      display: inline;
+    }
+    &-t {
+      display: table;
+    }
+    &-tc {
+      display: table-cell;
+    }
+  }
+}
+
+@include l-mobile {
+  .u-d-sp {
+    &-b {
+      display: block;
+    }
+    &-ib {
+      display: inline-block;
+    }
+    &-i {
+      display: inline;
+    }
+    &-t {
+      display: table;
+    }
+    &-tc {
+      display: table-cell;
+    }
+  }
+}

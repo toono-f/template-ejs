@@ -1,0 +1,8 @@
+{
+  "[html]": {
+    "editor.defaultFormatter": "j69.ejs-beautify"
+  },
+  "emmet.includeLanguages": {
+    "ejs": "html"
+  }
+}

@@ -1,0 +1,15 @@
+@each $key, $value in $colors {
+  .u-c {
+    &-#{$key} {
+      color: $value;
+    }
+  }
+}
+
+@each $key, $value in $colors {
+  .u-bg {
+    &-#{$key} {
+      background-color: $value;
+    }
+  }
+}

@@ -1,0 +1,7 @@
+.u-ff {
+  @each $key, $value in $font-familys {
+    &-#{$key} {
+      font-family: $value;
+    }
+  }
+}

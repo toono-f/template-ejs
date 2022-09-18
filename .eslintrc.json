@@ -1,0 +1,17 @@
+// 参考： https://zenn.dev/teppeis/articles/2021-02-eslint-prettier-vscode
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "es7": true,
+    "node": true,
+    "jquery": true
+  },
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "extends": ["eslint:recommended", "prettier"]
+}

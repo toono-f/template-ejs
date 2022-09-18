@@ -1,0 +1,11 @@
+<% var data = json; %>
+<% var page = 'index'; %>
+<%- include('_layout/_head',{page: page}); %>
+<div class="l-page">
+  <%- include('_layout/_header',{page: page}); %>
+  <main class="l-contents js-contents">
+    <!-- パスの出力方法 -->
+    <p><a href="<%= data.pages.link.directory %>">Linkです</a></p>
+    <p><a href="<%= path() %>link/">Linkです</a></p>
+  </main>
+  <%- include('_layout/_footer'); %>

@@ -1,0 +1,49 @@
+<%
+  path = function(fileName) {
+    var depth = filename.replace(/\\/g, '/').split('src')[1].split('/').length - 2;
+    var path = depth > 0 ? '../'.repeat(depth) : './';
+    if ( fileName !== undefined ) {
+      path += fileName;
+    }
+    return path;
+  };
+%>
+
+<%
+  var data = json;
+  var titleMerge = (data.pages[page].title != '') ? data.pages[page].title + ' | ' + data.meta.websiteName : data.meta.websiteName;
+%>
+
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title><%= titleMerge %></title>
+  <meta name="viewport" content="width=device-width">
+  <meta name="description" content="<%= data.pages[page].description || data.meta.description %>">
+  <meta name="keywords" content="">
+  <meta name="format-detection" content="telephone=no">
+  <script>
+    var viewport = document.querySelector('meta[name="viewport"]');
+
+    function switchViewport() {
+      var value = window.outerWidth > 375 ? "width=device-width,initial-scale=1.0" : "width=375";
+      if (viewport.getAttribute("content") !== value) {
+        viewport.setAttribute("content", value)
+      }
+    }
+    switchViewport();
+    window.addEventListener("resize", switchViewport);
+  </script>
+  <style>
+    .l-page {
+      visibility: hidden;
+      opacity: 0;
+    }
+  </style>
+  <link rel="preload" href="<%= path(); %>assets/css/main.css" as="style">
+  <link rel="stylesheet" href="<%= path(); %>assets/css/main.css" media="print" onload="this.media='all'">
+</head>
+
+<body>

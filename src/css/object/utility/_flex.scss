@@ -1,0 +1,232 @@
+.u-flex {
+  display: flex;
+}
+.u-flex-inline {
+  display: inline-flex;
+}
+.u-flex--wrap {
+  flex-wrap: wrap;
+}
+.u-flex--col-reverse {
+  flex-direction: column-reverse;
+}
+.u-flex--col {
+  flex-direction: column;
+}
+.u-flex--row-reverse {
+  flex-direction: row-reverse;
+}
+.u-flex--hr-end {
+  justify-content: flex-end;
+}
+.u-flex--hr-center {
+  justify-content: center;
+}
+.u-flex--hr-between {
+  justify-content: space-between;
+}
+.u-flex--hr-around {
+  justify-content: space-around;
+}
+.u-flex--vt-baseline {
+  align-items: baseline;
+}
+.u-flex--vt-start {
+  align-items: flex-start;
+}
+.u-flex--vt-end {
+  align-items: flex-end;
+}
+.u-flex--vt-center {
+  align-items: center;
+}
+@for $i from -1 through 10 {
+  .u-flex--order-#{$i} {
+    order: $i;
+  }
+}
+
+@include l-pc {
+  .u-flex-pc {
+    display: flex;
+  }
+  .u-flex-inline-pc {
+    display: inline-flex;
+  }
+  .u-flex--wrap-pc {
+    flex-wrap: wrap;
+  }
+  .u-flex--row-reverse-pc {
+    flex-direction: row-reverse;
+  }
+  .u-flex--col-reverse-pc {
+    flex-direction: column-reverse;
+  }
+  .u-flex--col-pc {
+    flex-direction: column;
+  }
+  .u-flex--hr-end-pc {
+    justify-content: flex-end;
+  }
+  .u-flex--hr-center-pc {
+    justify-content: center;
+  }
+  .u-flex--hr-between-pc {
+    justify-content: space-between;
+  }
+  .u-flex--hr-around-pc {
+    justify-content: space-around;
+  }
+  .u-flex--vt-baseline {
+    align-items: baseline;
+  }
+  .u-flex--vt-start-pc {
+    align-items: flex-start;
+  }
+  .u-flex--vt-end-pc {
+    align-items: flex-end;
+  }
+  .u-flex--vt-center-pc {
+    align-items: center;
+  }
+  @for $i from -1 through 10 {
+    .u-flex--order-#{$i}-pc {
+      order: $i;
+    }
+  }
+}
+
+@include l-more-than-mobile {
+  .u-flex-ct {
+    display: flex;
+  }
+  .u-flex-inline-ct {
+    display: inline-flex;
+  }
+  .u-flex--wrap-ct {
+    flex-wrap: wrap;
+  }
+  .u-flex--row-reverse-ct {
+    flex-direction: row-reverse;
+  }
+  .u-flex--col-reverse-ct {
+    flex-direction: column-reverse;
+  }
+  .u-flex--col-ct {
+    flex-direction: column;
+  }
+  .u-flex--hr-end-ct {
+    justify-content: flex-end;
+  }
+  .u-flex--hr-center-ct {
+    justify-content: center;
+  }
+  .u-flex--hr-between-ct {
+    justify-content: space-between;
+  }
+  .u-flex--hr-around-ct {
+    justify-content: space-around;
+  }
+  .u-flex--vt-start-ct {
+    align-items: flex-start;
+  }
+  .u-flex--vt-baseline-ct {
+    align-items: baseline;
+  }
+  .u-flex--vt-end-ct {
+    align-items: flex-end;
+  }
+  .u-flex--vt-center-ct {
+    align-items: center;
+  }
+  @for $i from -1 through 10 {
+    .u-flex--order-#{$i}-ct {
+      order: $i;
+    }
+  }
+}
+
+@include l-tablet {
+  .u-flex-tb {
+    display: flex;
+  }
+  .u-flex-inline-tb {
+    display: inline-flex;
+  }
+  .u-flex--wrap-tb {
+    flex-wrap: wrap;
+  }
+  .u-flex--col-reverse-tb {
+    flex-direction: column-reverse;
+  }
+  .u-flex--col-tb {
+    flex-direction: column;
+  }
+  .u-flex--hr-end-tb {
+    justify-content: flex-end;
+  }
+  .u-flex--hr-center-tb {
+    justify-content: center;
+  }
+  .u-flex--hr-between-tb {
+    justify-content: space-between;
+  }
+  .u-flex--hr-around-tb {
+    justify-content: space-around;
+  }
+  .u-flex--vt-start-tb {
+    align-items: flex-start;
+  }
+  .u-flex--vt-end-tb {
+    align-items: flex-end;
+  }
+  .u-flex--vt-center-tb {
+    align-items: center;
+  }
+  @for $i from -1 through 10 {
+    .u-flex--order-#{$i}-tb {
+      order: $i;
+    }
+  }
+}
+
+@include l-mobile {
+  .u-flex-sp {
+    display: flex;
+  }
+  .u-flex--wrap-sp {
+    flex-wrap: wrap;
+  }
+  .u-flex--col-reverse-sp {
+    flex-direction: column-reverse;
+  }
+  .u-flex--col-sp {
+    flex-direction: column;
+  }
+  .u-flex--hr-end-sp {
+    justify-content: flex-end;
+  }
+  .u-flex--hr-center-sp {
+    justify-content: center;
+  }
+  .u-flex--hr-between-sp {
+    justify-content: space-between;
+  }
+  .u-flex--hr-around-sp {
+    justify-content: space-around;
+  }
+  .u-flex--vt-start-sp {
+    align-items: flex-start;
+  }
+  .u-flex--vt-end-sp {
+    align-items: flex-end;
+  }
+  .u-flex--vt-center-sp {
+    align-items: center;
+  }
+  @for $i from -1 through 10 {
+    .u-flex--order-#{$i}-sp {
+      order: $i;
+    }
+  }
+}

@@ -1,0 +1,221 @@
+// ==========================================================================
+// font-size
+// ==========================================================================
+@mixin fs-all($sp: null, $pc: null, $tb: null) {
+  @if ($pc) {
+    font-size: rem($pc);
+  } @else {
+    font-size: rem($sp);
+  }
+  @if ($tb) {
+    @include l-tablet {
+      font-size: rem($tb);
+    }
+  }
+  @if ($sp) {
+    @include l-mobile {
+      // font-size: rem($sp);
+      font-size: sp($sp); // vwを扱う場合
+      // font-size: mn($sp); // 最大値のみを設定する場合
+      // font-size: cp($value, $value * 2); // 最小値も設定する場合
+    }
+  }
+}
+// ==========================================================================
+// size
+// ==========================================================================
+@mixin size($w, $h: $w) {
+  width: $w;
+  height: $h;
+}
+@mixin size-rem($w, $h: $w) {
+  width: rem($w);
+  height: rem($h);
+}
+@mixin size-mn($w, $h: $w) {
+  width: mn($w);
+  height: mn($h);
+}
+@mixin size-tb($w, $h: $w) {
+  width: tb($w);
+  height: tb($h);
+}
+@mixin size-sp($w, $h: $w) {
+  width: sp($w);
+  height: sp($h);
+}
+// ==========================================================================
+// border
+// ==========================================================================
+@mixin border($width: rem(1), $style: solid, $position: null, $color: null, $radius: null) {
+  border-color: $color;
+  border-width: $width;
+  border-radius: $radius;
+  @if ($position) {
+    border-#{$position}-style: $style;
+  } @else {
+    border-style: $style;
+  }
+}
+// ==========================================================================
+// circle
+// ==========================================================================
+@mixin circle($x, $y: $x) {
+  @include size($x, $y);
+  border-radius: 50%;
+}
+@mixin circle-rem($x, $y: $x) {
+  @include size(rem($x), rem($y));
+  border-radius: 50%;
+}
+@mixin circle-mn($x, $y: $x) {
+  @include size(mn($x), mn($y));
+  border-radius: 50%;
+}
+@mixin circle-tb($x, $y: $x) {
+  @include size(tb($x), tb($y));
+  border-radius: 50%;
+}
+@mixin circle-sp($x, $y: $x) {
+  @include size(sp($x), sp($y));
+  border-radius: 50%;
+}
+// ==========================================================================
+// center
+// ==========================================================================
+@mixin center($t: 50%, $b: -50%, $l: 50%, $r: -50%) {
+  position: absolute;
+  top: $t;
+  left: $l;
+  transform: translate($r, $b);
+}
+@mixin center-x($position: absolute, $t: null, $b: null) {
+  position: $position;
+  top: $t;
+  bottom: $b;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@mixin center-y($position: absolute, $r: null, $l: null) {
+  position: $position;
+  top: 50%;
+  right: $r;
+  left: $l;
+  transform: translateY(-50%);
+}
+// ==========================================================================
+// display
+// ==========================================================================
+@mixin element($content: '', $d: block) {
+  display: $d;
+  content: $content;
+}
+@mixin flex($jc: null, $ai: null, $w: null, $d: null) {
+  display: flex;
+  flex-direction: $d;
+  flex-wrap: $w;
+  align-items: $ai;
+  justify-content: $jc;
+}
+@mixin inline-flex($jc: null, $ai: null, $w: null, $d: null) {
+  display: inline-flex;
+  flex-direction: $d;
+  flex-wrap: $w;
+  align-items: $ai;
+  justify-content: $jc;
+}
+// ==========================================================================
+// position
+// ==========================================================================
+@mixin absolute($t: null, $r: null, $b: null, $l: null, $z: null) {
+  position: absolute;
+  top: $t;
+  right: $r;
+  bottom: $b;
+  left: $l;
+  z-index: $z;
+}
+@mixin absolute-wide($z: null) {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: $z;
+}
+// ==========================================================================
+// background
+// ==========================================================================
+@mixin bg($url: '') {
+  background-image: url('../images/#{$url}');
+}
+@mixin bg-img($url: '', $size: contain, $position: center, $repeat: no-repeat) {
+  background-image: url('../images/#{$url}');
+  background-repeat: $repeat;
+  background-position: $position;
+  background-size: $size;
+}
+@mixin bg-font($content, $fw: 900) {
+  font-family: 'Font Awesome 5 Free', sans-serif;
+  font-weight: $fw;
+  content: $content;
+}
+// ==========================================================================
+// hover
+// ==========================================================================
+@mixin hover-opacity {
+  @media screen and (min-width: $break-point-tablet-l + 0.0625em) and (hover: hover) {
+    cursor: pointer;
+    transition: opacity 0.5s;
+  }
+  @include hover {
+    opacity: 0.7;
+  }
+}
+// ==========================================================================
+// scroll
+// ==========================================================================
+@mixin scroll-animation {
+  opacity: 0;
+  @include print {
+    opacity: 1;
+  }
+  &.is-active {
+    opacity: 1;
+    transition: opacity 1s, transform 1s;
+  }
+}
+// ==========================================================================
+// img
+// ==========================================================================
+@mixin img-cover($obj: cover, $po: relative) {
+  position: $po;
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: $obj;
+  }
+}
+// ==========================================================================
+// line-height
+// ==========================================================================
+@mixin line-height-crop($line-height) {
+  display: inline-block;
+  line-height: $line-height;
+  &::before,
+  &::after {
+    display: block;
+    width: 0;
+    height: 0;
+    content: '';
+  }
+  &::before {
+    margin-top: calc((1 - #{$line-height}) * 0.5em);
+  }
+  &::after {
+    margin-bottom: calc((1 - #{$line-height}) * 0.5em);
+  }
+}

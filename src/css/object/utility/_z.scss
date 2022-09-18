@@ -1,0 +1,5 @@
+@for $i from 0 through 20 {
+  .u-z-#{$i * 5} {
+    z-index: $i * 5;
+  }
+}

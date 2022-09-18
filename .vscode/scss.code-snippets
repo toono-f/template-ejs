@@ -1,0 +1,218 @@
+{
+  "Rgba": {
+    "scope": "css,scss",
+    "prefix": "rgba",
+    "body": ["rgba(${1:#000},${2:0.5});"],
+    "description": "rbga"
+  },
+  "Hover": {
+    "scope": "scss",
+    "prefix": "@hover",
+    "body": "@include hover {$1}",
+    "description": "hover"
+  },
+  "Vw": {
+    "scope": "scss",
+    "prefix": "vw",
+    "body": ["vw($1,$2);"],
+    "description": "vw"
+  },
+  "Vh": {
+    "scope": "scss",
+    "prefix": "vh",
+    "body": ["vh($1,$2);"],
+    "description": "vh"
+  },
+  "Rem": {
+    "scope": "scss",
+    "prefix": "rem",
+    "body": ["rem($1);"],
+    "description": "rem"
+  },
+  "Color": {
+    "scope": "scss",
+    "prefix": "c",
+    "body": ["color: c(${1:white-nl});"],
+    "description": "color"
+  },
+  "BackgroundColor": {
+    "scope": "scss",
+    "prefix": "bg",
+    "body": ["background-color: c(${1:white-nl});"],
+    "description": "background-color"
+  },
+  "FontWeight": {
+    "scope": "scss",
+    "prefix": "fw",
+    "body": ["font-weight: fw(${1:bold});"],
+    "description": "font-weight"
+  },
+  "FontFamily": {
+    "scope": "scss",
+    "prefix": "ff",
+    "body": ["font-family: ff(${1:ja});"],
+    "description": "font-family"
+  },
+  "Size": {
+    "scope": "scss",
+    "prefix": "@size",
+    "body": "@include size($1);",
+    "description": ""
+  },
+  "SizeRem": {
+    "scope": "scss",
+    "prefix": "@size-rem",
+    "body": "@include size-rem($1);",
+    "description": ""
+  },
+  "SizeTb": {
+    "scope": "scss",
+    "prefix": "@size-tb",
+    "body": "@include size-tb($1);",
+    "description": ""
+  },
+  "SizeSp": {
+    "scope": "scss",
+    "prefix": "@size-sp",
+    "body": "@include size-sp($1);",
+    "description": ""
+  },
+  "L-pc": {
+    "scope": "scss",
+    "prefix": "@pc",
+    "body": "@include l-pc {$1}",
+    "description": ""
+  },
+  "L-more-than-mobile": {
+    "scope": "scss",
+    "prefix": "@more",
+    "body": "@include l-more-than-mobile {$1}",
+    "description": ""
+  },
+  "L-tablet": {
+    "scope": "scss",
+    "prefix": "@tablet",
+    "body": "@include l-tablet {$1}",
+    "description": ""
+  },
+  "L-mobile": {
+    "scope": "scss",
+    "prefix": "@mobile",
+    "body": "@include l-mobile {$1}",
+    "description": ""
+  },
+  "Print": {
+    "scope": "scss",
+    "prefix": "@print",
+    "body": "@include print {$1}",
+    "description": ""
+  },
+  "ShortHand": {
+    "scope": "scss",
+    "prefix": "sh",
+    "body": ["sh($1,$2);"],
+    "description": ""
+  },
+  "ShortHandMinimum": {
+    "scope": "scss",
+    "prefix": "sh-sp",
+    "body": ["sh-sp($1,$2);"],
+    "description": ""
+  },
+  "PaddingSh": {
+    "scope": "scss",
+    "prefix": "pd-sh",
+    "body": ["padding: sh($1,$2);"],
+    "description": ""
+  },
+  "PaddingShSp": {
+    "scope": "scss",
+    "prefix": "pd-sh-sp",
+    "body": ["padding: sh-sp($1,$2);"],
+    "description": ""
+  },
+  "Element": {
+    "scope": "scss",
+    "prefix": "@el",
+    "body": "@include element(\\$content: '', \\$d: block);",
+    "description": ""
+  },
+  "LineHeightCrop": {
+    "scope": "scss",
+    "prefix": "@lh",
+    "body": "@include line-height-crop($1);",
+    "description": ""
+  },
+  "LetterSpacing": {
+    "scope": "scss",
+    "prefix": "@ls",
+    "body": "@include letter($1, $2);",
+    "description": ""
+  },
+  "BgImg": {
+    "scope": "scss",
+    "prefix": "@bg",
+    "body": "@include bg-img(\\$url: ${1:''}, \\$size: ${2:contain}, \\$position: ${3:center}, \\$repeat: ${4:no-repeat});",
+    "description": ""
+  },
+  "BgImgNormal": {
+    "scope": "scss",
+    "prefix": "@bg-normal",
+    "body": "@include bg($1);",
+    "description": ""
+  },
+  "Flex": {
+    "scope": "scss",
+    "prefix": "@flex",
+    "body": "@include flex(\\$jc: ${1:space-between}, \\$ai: ${2:center}, \\$w: ${3:nowrap}, \\$d: ${4:row});",
+    "description": ""
+  },
+  "FlexInline": {
+    "scope": "scss",
+    "prefix": "@flexi",
+    "body": "@include inline-flex(\\$jc: ${1:flex-start}, \\$ai: ${2:center}, \\$w: ${3:nowrap}, \\$d: ${4:row});",
+    "description": ""
+  },
+  "FlexCenterCenter": {
+    "scope": "scss",
+    "prefix": "@flcc",
+    "body": "@include flex(\\$jc: ${1:center}, \\$ai: ${2:center});",
+    "description": ""
+  },
+  "CenterPosition": {
+    "scope": "scss",
+    "prefix": "@center",
+    "body": "@include center(\\$t: ${1:50%}, \\$b: ${2:-50%}, \\$l: ${3:50%}, \\$r: ${4:-50%});",
+    "description": ""
+  },
+  "CenterPositionY": {
+    "scope": "scss",
+    "prefix": "@center-y",
+    "body": "@include center-y(\\$position: ${1:absolute}, \\$r: ${2:null}, \\$l: ${3:null});",
+    "description": ""
+  },
+  "CenterPositionX": {
+    "scope": "scss",
+    "prefix": "@center-x",
+    "body": "@include center-x(\\$position: ${1:absolute}, \\$t: ${2:null}, \\$b: ${3:null});",
+    "description": ""
+  },
+  "ImgCover": {
+    "scope": "scss",
+    "prefix": "@img",
+    "body": "@include img-cover(\\$obj: ${1:contain}, \\$po: ${2:relative});",
+    "description": ""
+  },
+  "HoverOpacity": {
+    "scope": "scss",
+    "prefix": "@opacity",
+    "body": "@include hover-opacity;",
+    "description": ""
+  },
+  "FontSizeAll": {
+    "scope": "scss",
+    "prefix": "@fs",
+    "body": "@include fs-all($1);",
+    "description": ""
+  }
+}

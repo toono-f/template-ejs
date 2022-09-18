@@ -1,0 +1,115 @@
+// ==========================================================================
+// break-points
+// ==========================================================================
+// 0.0625em = 1px
+// pc-l | pc-s | tablet | mobile
+// ○ | - | - | -
+@mixin l-pc-l {
+  @media all and (min-width: $break-point-pc-s + 0.0625em) {
+    @content;
+  }
+}
+// - | ○ | - | -
+@mixin l-pc-s {
+  @media all and (min-width: $break-point-tablet-l + 0.0625em) and (max-width: $break-point-pc-s) {
+    @content;
+  }
+  @media print {
+    @content;
+  }
+}
+// - | - | ○ | -
+@mixin l-tablet {
+  @media only screen and (min-width: $break-point-tablet-p) and (max-width: $break-point-tablet-l) {
+    @content;
+  }
+}
+@mixin l-tablet-l {
+  @media only screen and (min-width: $break-point-tablet-p) and (max-width: $break-point-tablet-l) and (orientation: landscape) {
+    @content;
+  }
+}
+@mixin l-tablet-p {
+  @media only screen and (min-width: $break-point-tablet-p) and (max-width: $break-point-tablet-l) and (orientation: portrait) {
+    @content;
+  }
+}
+// - | - | - | ○
+@mixin l-mobile {
+  @media only screen and (max-width: $break-point-tablet-p - 0.0625em) {
+    @content;
+  }
+}
+@mixin l-mobile-l {
+  @media only screen and (max-width: $break-point-tablet-p - 0.0625em) and (orientation: landscape) {
+    @content;
+  }
+}
+@mixin l-mobile-p {
+  @media only screen and (max-width: $break-point-tablet-p - 0.0625em) and (orientation: portrait) {
+    @content;
+  }
+}
+// ○ | ○ | - | -
+@mixin l-pc {
+  @media all and (min-width: $break-point-tablet-l + 0.0625em) {
+    @content;
+  }
+  @media print {
+    @content;
+  }
+}
+// - | - | ○ | ○
+@mixin l-tablet-and-mobile {
+  @media only screen and (max-width: $break-point-tablet-l) {
+    @content;
+  }
+}
+// ○ | ○ | ○ | -
+@mixin l-more-than-mobile {
+  @media all and (min-width: $break-point-tablet-p) {
+    @content;
+  }
+  @media print {
+    @content;
+  }
+}
+// - | ○ | ○ | ○
+@mixin l-less-than-pc-s {
+  @media all and (max-width: $break-point-pc-s) {
+    @content;
+  }
+}
+// ==========================================================================
+// break-points 追加プロパティ
+// ==========================================================================
+// スマートフォンのみ
+@mixin l-mobile-n {
+  @media only screen and (max-width: $break-point-mobile-l) {
+    @content;
+  }
+}
+// 小さなスマートフォンのみ
+@mixin l-mobile-s {
+  @media only screen and (max-width: $break-point-mobile-s - 0.0625em) {
+    @content;
+  }
+}
+// ==========================================================================
+// hover
+// ==========================================================================
+@mixin hover {
+  &:hover {
+    @media screen and (min-width: $break-point-tablet-l + 0.0625em) and (hover: hover) {
+      @content;
+    }
+  }
+}
+// ==========================================================================
+// 印刷用
+// ==========================================================================
+@mixin print {
+  @media print {
+    @content;
+  }
+}

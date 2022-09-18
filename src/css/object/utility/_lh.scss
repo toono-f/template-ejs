@@ -1,0 +1,7 @@
+.u-lh {
+  @each $key, $value in $line-heights {
+    &-#{$key} {
+      line-height: $value;
+    }
+  }
+}
