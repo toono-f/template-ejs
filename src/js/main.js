@@ -1,7 +1,7 @@
 // ブラウザ（デバイス）分岐処理
-import UaParser from 'ua-parser-js';
-const uaParser = new UaParser();
-const browser = uaParser.getBrowser().name;
+// import UaParser from 'ua-parser-js';
+// const uaParser = new UaParser();
+// const browser = uaParser.getBrowser().name;
 
 // sleep処理
 // const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
@@ -10,27 +10,26 @@ const browser = uaParser.getBrowser().name;
 // const page = document.querySelector('.js-page');
 // const pageId = page.getAttribute('data-page-id');
 
-const init = async () => {
-  // sleep処理
-  // await sleep(100);
+// const init = async () => {
+// sleep処理
+// await sleep(100);
+// ブラウザ（デバイス）分岐処理
+// const HtmlElement = document.querySelector('html');
+// switch (browser) {
+//   case 'Chrome':
+//     HtmlElement.classList.add('is-chrome');
+//     break;
+// case 'Safari':
+//   HtmlElement.classList.add('is-safari');
+//   break;
+// default:
+// }
+// ページ分岐処理
+// switch (pageId) {
+//   case 'index':
+//     break;
+//   default:
+// }
+// };
 
-  // ブラウザ（デバイス）分岐処理
-  const HtmlElement = document.querySelector('html');
-  switch (browser) {
-    case 'Chrome':
-      HtmlElement.classList.add('is-chrome');
-      break;
-    // case 'Safari':
-    //   HtmlElement.classList.add('is-safari');
-    //   break;
-    default:
-  }
-  // ページ分岐処理
-  // switch (pageId) {
-  //   case 'index':
-  //     break;
-  //   default:
-  // }
-};
-
-init();
+// init();
