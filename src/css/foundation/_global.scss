@@ -2,11 +2,6 @@
 html {
   height: 100%;
   font-size: 62.5%;
-  &.is-chrome {
-    img {
-      image-rendering: -webkit-optimize-contrast; // Chromeでの画像ぼやけ防止
-    }
-  }
 }
 
 body {
