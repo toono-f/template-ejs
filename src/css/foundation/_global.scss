@@ -14,19 +14,9 @@ body {
   color: c(default);
   letter-spacing: ls(xs);
   @include fs-all(14, 16);
-  // 改行設定
-  word-wrap: break-word;
-  // テキスト自動拡大アルゴリズムを有効化
-  -webkit-text-size-adjust: 100%;
-  text-size-adjust: 100%;
   // アンチエイリアスを調節（mac）
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  @include l-mobile {
-    // テキスト自動拡大アルゴリズムを無効化
-    -webkit-text-size-adjust: none;
-    text-size-adjust: none;
-  }
+  // -webkit-font-smoothing: antialiased;
+  // -moz-osx-font-smoothing: grayscale;
   @include print {
     zoom: 0.5;
     -webkit-print-color-adjust: exact;
