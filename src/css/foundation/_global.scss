@@ -81,20 +81,11 @@ option {
   margin: 0;
 }
 
-select::-ms-expand {
-  display: none;
-}
-
 input::placeholder {
   color: rgba(c(default), 0.5);
 }
 
 /*! purgecss end ignore */
-
-/* IE */
-// input:-ms-input-placeholder {
-//   color: rgba(c(default), 0.5);
-// }
 
 // *:focus {
 //   outline: none; // クリックしたときの青い枠線
